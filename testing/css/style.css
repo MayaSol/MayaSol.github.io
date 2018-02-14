@@ -487,7 +487,7 @@ body {
   margin: 0;
   padding-top: 204px;
 
-  transition: padding-top 1s;
+  transition: 1s;
   transform: translate3d(0, 0, 0);
 
   -ms-flex-direction: column;
@@ -497,10 +497,8 @@ body {
 
 .page-wrapper--closed {
   padding-top: 20px;
-}
 
-.body--closed-header {
-  padding-top: 20px;
+  transform: translate3d(0, 0, 0);
 }
 
 .page-header {
@@ -515,12 +513,10 @@ body {
       flex-direction: column;
 
   transition: transform 1s;
-  transform: translate3d(0, 0, 0);
 
   background-color: #ffffff;
 
   -ms-flex-direction: column;
-  transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
 }
 .page-header::after {
@@ -539,7 +535,7 @@ body {
 }
 
 .page-header--closed {
-  transform: translateY(-184px) translate3d(0, 0, 0);
+  transform: translate3d(0, -184px, 0);
 }
 
 .page-header__main {
@@ -554,6 +550,9 @@ body {
   margin: 0 auto; 
   padding-right: 20px;
   padding-left: 20px;
+
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .page-header__logo {
@@ -610,6 +609,18 @@ body {
   box-shadow: 0 4px 0 0 #ffffff, 0 8px 0 0 #ffffff;
 }
 
+@keyframes bounce {
+  33% {
+    transform: translate3d(0, calc(2.5%), 0) scaleY(1.05);
+  }
+  66% {
+    transform: translate3d(0, calc(-2.5%), 0) scaleY(0.95);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scaleY(1);
+  }
+}
+
 .main-nav {
   margin: auto;
 
@@ -641,6 +652,10 @@ body {
   border-right: 1px solid #ffffff;
   background-color: #3c3a3a;
 
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -ms-flex-positive: 1;
   flex-grow: 1;
   -ms-flex-preferred-size: 15%;
@@ -659,25 +674,11 @@ body {
   transition: margin-top 0.5s, heigth 0.5s;
 }
 .main-nav__item:hover ul {
-  animation: bounce 0.8s 0.2s;
-}
-
-@keyframes bounce {
-  33% {
-    transform: translateY(2.5%) scaleY(1.05);
-  }
-  66% {
-    transform: translateY(-2.5%) scaleY(0.95);
-  }
-  100% {
-    transform: translateY(0) scaleY(1);
-  }
+  animation: bounce 0.8s 0.2s forwards;
 }
 
 .main-nav__item a {
   display: block;
-
-  margin: auto;
 
   text-decoration: none;
 
@@ -806,6 +807,8 @@ fieldset[disabled] a.btn {
   display: flex;
       flex-direction: column;
 
+  box-sizing: border-box;
+  width: 75%; 
   margin-top: 34px;
   margin-left: 10px;
   padding-bottom: 20px;
@@ -816,6 +819,7 @@ fieldset[disabled] a.btn {
 }
 
 .text-bottom {
+  width: 100%; 
   margin-top: auto;
 }
 
@@ -875,8 +879,6 @@ fieldset[disabled] a.btn {
   display: -ms-flexbox;
   display: flex;
 
-  min-height: 50px;
-
   -ms-flex-align: center;
   align-items: center;
   -ms-flex-pack: center;
@@ -892,7 +894,10 @@ fieldset[disabled] a.btn {
   margin: 0;
   padding: 0;
 
-  list-style: none;
+  list-style: none; 
+
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .nav-secondary a {
   text-decoration: underline;
@@ -929,6 +934,7 @@ fieldset[disabled] a.btn {
 
   width: 25%;
   min-height: 50px;
+  padding-left: 10px;
 
   -ms-flex-align: center;
   align-items: center;
@@ -1067,6 +1073,7 @@ fieldset[disabled] a.btn {
   outline: 1px solid red;
 }
 .product-card p {
+  width: 100%; 
   margin-top: auto;
   margin-bottom: auto;
 
@@ -1077,6 +1084,7 @@ fieldset[disabled] a.btn {
   position: relative;
   z-index: -1;
 
+  max-width: 100%;
   margin-top: 5px;
   margin-bottom: 10px;
 }
