@@ -533,22 +533,23 @@ body {
 
 .main-nav__item {
   position: relative;
+  z-index: 1;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: center;
-      justify-content: center;
+  min-width: 0;
   min-height: 80px;
   padding: 5px;
   text-align: center;
   border-right: 1px solid #ffffff;
   background-color: #3c3a3a;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
   -ms-flex-positive: 1;
       flex-grow: 1;
   -ms-flex-preferred-size: 10%;
-      flex-basis: 10%;
-  min-width: 0; }
+      flex-basis: 10%; }
   .main-nav__item:last-child {
     border-right: none; }
   .main-nav__item:hover {
@@ -560,10 +561,11 @@ body {
 
 .main-nav__item a {
   display: block;
+  width: 100%;
+  min-width: 0;
   text-decoration: none;
-  color: #ffffff;
   word-wrap: break-word;
-  min-width: 0; }
+  color: #ffffff; }
 
 .main-nav__item > a {
   position: relative;
@@ -678,9 +680,9 @@ fieldset[disabled] a.btn {
 .page-footer {
   margin-top: auto;
   padding-top: 19px;
+  padding-right: 20px;
   padding-bottom: 14px;
   padding-left: 20px;
-  padding-right: 20px;
   font-family: "PTSans", sans-serif;
   font-size: 1.6rem;
   background-color: rgba(127, 127, 127, 0.5);
@@ -715,6 +717,7 @@ fieldset[disabled] a.btn {
 .page-footer__nav {
   display: -ms-flexbox;
   display: flex;
+  width: 50%;
   -ms-flex-align: center;
       align-items: center;
   -ms-flex-pack: center;
@@ -725,11 +728,12 @@ fieldset[disabled] a.btn {
 .nav-secondary {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  width: 100%;
   margin: 0;
   padding: 0;
-  list-style: none; }
+  list-style: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
   .nav-secondary a {
     text-decoration: underline;
     color: #000000; }
@@ -763,13 +767,14 @@ fieldset[disabled] a.btn {
       flex-shrink: 0; }
 
 .page-footer__logo {
+  display: block;
   width: 75px;
   height: 75px;
   border: 3px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
   background-image: url("../img/logo-main.png");
-  background-size: 100% 100%;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-size: 100% 100%; }
 
 .tooltip {
   display: inline-block;
