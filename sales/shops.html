@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.min.css">
+  <link rel="stylesheet" href="node_modules/jquery-ui/themes/base/all.css">
+  <script src="node_modules/jquery/dist/jquery.js"></script>
+  <script src="node_modules/jquery-ui/ui/widgets/datepicker.js"></script>
+</head>
+
+
+<body>
+
+    <header class="top-menu">
+    <div class="top-menu__logo logo">
+      <div class="logo__img">
+        <img src="img/logo.png" alt="">
+      </div>
+    </div>
+    <div class="top-menu__main-menu main-menu">
+      <ul class="main-menu__list">
+        <li class="main-menu__item">
+          <a href="" class="main-menu__link main-menu__messages">
+            <svg class="icon icon-messages" aria-hidden="true" role="img" width="30" height="30"> <use xlink:href="img/svg-sprite/svg-sprite.svg#icon-mail"></use>
+            </svg>
+            <div class="main-menu__counter"><span>3</span></div>
+          </a>
+        </li>
+        <li class = "main-menu__item">
+          <a href="" class="main-menu__link main-menu__alarms">
+            <svg class="icon icon-alarms" aria-hidden="true" role="img" width="30" height="30"> <use xlink:href="img/svg-sprite/svg-sprite.svg#icon-alarm"></use>
+            </svg>
+            <div class="main-menu__counter"><span>3</span></div>
+          </a>
+        </li>
+        <li class="main-menu__item">
+          <a href="" class="main-menu__link main-menu__flags">
+            <svg class="icon icon-flags" aria-hidden="true" role="img" width="30" height="30"> <use href="img/svg-sprite/svg-sprite.svg#icon-flag" xlink:href="img/svg-sprite/svg-sprite.svg#icon-flag"></use>
+            </svg>
+            <div class="main-menu__counter"><span>3</span></div>
+          </a>
+        </li>
+        <li class="main-menu__item">
+          <a href="" class="main-menu__logo">
+            <div class="main-menu__logo-img">
+            </div>
+            StockPoint
+          </a>
+        </li>
+        <li class="main-menu__item main-menu__item--settings">
+          <a href="" class="main-menu__link main-menu__settings">
+            <svg class="icon icon-gear" aria-hidden="true" role="img" width="30" height="30"> <use xlink:href="img/svg-sprite/svg-sprite.svg#icon-gear"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+
+
+  <main>
+
+        <section class="sidebar">
+      <ul class="sidebar__list">
+        <li class="sidebar__item sidebar__item--create ">
+          <a href="index.html" class="sidebar__link">
+            <svg aria-hidden="true" role="img" width="30" height="30"> <use xlink:href="img/svg-sprite/svg-sprite.svg#icon-create"></use>
+            </svg>
+            СОЗДАТЬ
+          </a>
+        </li>
+        <li class="sidebar__item sidebar__item--tasks ">
+          <a href="tasks.html" class="sidebar__link">
+            <svg aria-hidden="true" role="img" width="30" height="30"> <use xlink:href="img/svg-sprite/svg-sprite.svg#icon-tasks"></use>
+            </svg>
+            Задачи
+          </a>
+        </li>
+        <li class="sidebar__item sidebar__item--invoice ">
+          <a href="invoices.html" class="sidebar__link">
+            <svg aria-hidden="true" role="img" width="30" height="30"> <use xlink:href="img/svg-sprite/svg-sprite.svg#icon-invoice"></use>
+            </svg>
+            СЧЕТА
+          </a>
+        </li>
+        <li class="sidebar__item sidebar__item--goods ">
+          <a href="goods.html" class="sidebar__link">
+            <svg aria-hidden="true" role="img" width="30" height="30"> <use xlink:href="img/svg-sprite/svg-sprite.svg#icon-rest"></use>
+            </svg>
+            Товары
+          </a>
+        </li>
+        <li class="sidebar__item sidebar__item--clients ">
+          <a href="clients.html" class="sidebar__link">
+            <svg aria-hidden="true" role="img" width="30" height="30"> <use xlink:href="img/svg-sprite/svg-sprite.svg#icon-clients"></use>
+            </svg>
+            КЛИЕНТЫ
+          </a>
+        </li>
+        <li class="sidebar__item sidebar__item--shops sidebar__item--active">
+          <a href="shops.html" class="sidebar__link">
+            <svg aria-hidden="true" role="img" width="30" height="30"> <use xlink:href="img/svg-sprite/svg-sprite.svg#icon-shop"></use>
+            </svg>
+            Магазины
+          </a>
+        </li>
+        <li class="sidebar__item sidebar__item--trade-reps ">
+          <a href="trade-reps.html" class="sidebar__link">
+            <svg aria-hidden="true" role="img" width="30" height="30"> <use xlink:href="img/svg-sprite/svg-sprite.svg#icon-warehouse"></use>
+            </svg>
+            Торгпреды
+          </a>
+        </li>
+      </ul>
+    </section>
+
+
+
+    <section class="content">
+
+      <section class="breadcrumbs__container">
+  <ul class="breadcrumbs">
+    <li class="breadcrumbs__item"><a href="index.html">Главная</a></li>
+    <li class="breadcrumbs__item">Создать</li>
+  </ul>
+</section>
+
+
+
+      <section class="select">
+        <label for="select-city"><span>Город</span></label>
+        <div class="select select--city">
+  <div class="select__wrapper select__wrapper--city">
+    <select id="select-city">
+      <option value="" disabled selected>Выберите город...</option>
+      <option value="city-03">Москва</option>
+      <option value="city-02">Красноярск</option>
+      <option value="city-03">Город</option>
+    </select>
+    <div class="select__arrow">
+      <svg aria-hidden="true" role="img" width="30" height="30"> <use xlink:href="img/svg-sprite/svg-sprite.svg#icon-arrow-up"></use>
+      </svg>
+    </div>
+  </div>
+</div>
+
+
+
+        <label for="select-warehouse"><span>Склад</span></label>
+        <div class="select select--warehouse">
+  <div class="select__wrapper select__wrapper--warehouse">
+    <select>
+      <option value="" disabled selected>Выбрать склад</option>
+      <option value="warehouse-03">Склад 1</option>
+      <option value="warehouse-02">Склад 2</option>
+      <option value="warehouse-03">Склад 3</option>
+    </select>
+    <div class="select__arrow">
+      <svg aria-hidden="true" role="img" width="30" height="30"> <use xlink:href="img/svg-sprite/svg-sprite.svg#icon-arrow-up"></use>
+      </svg>
+    </div>
+  </div>
+</div>
+
+      </section>
+
+      <section class="data">
+
+        <table id="table-shops" class="data-table data-table--shops">
+          <thead>
+            <tr>
+              <td class="hd-num">№</td>
+              <td class="hd-shop-title">Название</td>
+              <td class="hd-address">Адрес</td>
+              <td class="hd-contact">Контактное лицо</td>
+              <td class="hd-ordered">Заказано</td>
+              <td class="hd-paid">Оплачено</td>
+              <td class="hd-debt">Задолженность</td>
+              <td class="hd-buttons"></td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="col-num">1</td>
+              <td class="col-shop-title">Орбита</td>
+              <td class="col-address">г.Красноярск, ул. Вавилова, д. 50</td>
+              <td class="col-contact">Иванов Михаил</td>
+              <td class="col-ordered">10000</td>
+              <td class="col-paid">6500</td>
+              <td class="col-debt">3500</td>
+              <td class="col-buttons">
+                <a href="" class="btn btn--table btn--change">Изменить</a>
+                <a href="" class="btn btn--table btn--contact">Связаться</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-num">2</td>
+              <td class="col-shop-title">Наш маркет</td>
+              <td class="col-address">г.Ижевск, ул. Декабристов, д.23</td>
+              <td class="col-contact">Иванов Иван</td>
+              <td class="col-ordered">20000</td>
+              <td class="col-paid">10000</td>
+              <td class="col-debt">10000</td>
+              <td class="col-buttons">
+                <a href="" class="btn btn--table btn--change">Изменить</a>
+                <a href="" class="btn btn--table btn--contact">Связаться</a>
+              </td>
+            </tr>
+          </tbody>
+       </table>
+
+      </section>
+
+    </section>
+
+  </main>
+
+
+    <footer class="footer">
+    <span class="footer__credentials">
+      Developed by EPlatCom 2018 © . All rights reserved
+    </span>
+    <span class="footer__version">
+      Version <span class="footer__version-num">1.1</span>
+    </span>
+  </footer>
+
+  <script src="js-min/fields-calendar.js">
+  </script>
+
+
+
+</body>
+</html>

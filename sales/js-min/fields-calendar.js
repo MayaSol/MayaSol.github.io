@@ -1,0 +1,1 @@
+$(function(){$("#publication-date").datepicker()});
