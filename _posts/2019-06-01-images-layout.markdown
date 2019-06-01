@@ -7,9 +7,11 @@ categories: front-end images
 
 Чтобы картинка всегда помещалась в контейнер и ужималась при необходимости
 
+```
 {% raw  %}
 img {
   max-width: 100%;
   height: auto;
 }
 {% endraw %}
+```
