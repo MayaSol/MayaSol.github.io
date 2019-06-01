@@ -7,9 +7,7 @@ categories: front-end images
 
 Чтобы картинка всегда помещалась в контейнер и ужималась при необходимости
 
-```
-img {
+```img {
   max-width: 100%;
   height: auto;
-}
-```
+}```
