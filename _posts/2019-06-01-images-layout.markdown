@@ -12,4 +12,4 @@ img {
   max-width: 100%;
   height: auto;
 }
-{% endhighlight%}
+{% endhighlight %}
