@@ -1,3 +1,0 @@
-    $( function() {
-    $( "#publication-date" ).datepicker();
-  } );
