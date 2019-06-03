@@ -28,3 +28,6 @@ container {
   font-size: 0;
 }
 ```
+Свойство [object-fit](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit) позволяет использовать разные способы подгонки картинки под размер контейнера.
+
+[Полифилл для IE11](https://codepen.io/jonneal/pen/EKPONK)
